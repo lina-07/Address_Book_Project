@@ -86,4 +86,4 @@ public class Details {
         this.phoneNumber = phoneNumber;
     }
 }
-}
+

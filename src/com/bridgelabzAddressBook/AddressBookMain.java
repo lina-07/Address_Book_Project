@@ -6,13 +6,12 @@ public class AddressBookMain
 {
     public static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         System.out.println("Welcome to the Address Book ");
 
         AddressBook addressBook = new AddressBook();
 
-        System.out.println("Enter the contact details.............");
+        System.out.println("Enter the contact details:");
         System.out.println("Enter the first name:");
         String firstName = sc.next();
         System.out.println("Enter the last name:");
@@ -32,11 +31,21 @@ public class AddressBookMain
         Details d = new Details(firstName, lastName, address, city, state, email, phoneNumber, zip);
 
         ArrayList<Details> contactList = addressBook.contactList(d);
-        for(Details contact:contactList)
+        for (Details contact : contactList) {
+            System.out.println(contact.getFirstName() + " " + contact.getLastName() + " " + contact.getAddress() + " " + contact.getCity() +
+                    " " + contact.getState() + " " + contact.getEmail() + " " + contact.getPhoneNumber() + " " + contact.getZip());
+         }
+        System.out.println("\nDo you want to edit a contact? (yes/no)");
+        String choice = sc.next();
+        if (choice.equalsIgnoreCase("yes"))
         {
-            System.out.println(contact.getFirstName()+" "+contact.getLastName()+" "+contact.getAddress()+" "+contact.getCity()+
-                    " "+contact.getState()+" "+contact.getEmail()+" "+contact.getPhoneNumber()+" "+contact.getZip());
+            System.out.println("Enter the first name of the contact to edit:");
+            String editFirstName = sc.next();
+            System.out.println("Enter the last name of the contact to edit:");
+            String editLastName = sc.next();
+            addressBook.editContact(editFirstName, editLastName);
         }
-
     }
+
+
 }

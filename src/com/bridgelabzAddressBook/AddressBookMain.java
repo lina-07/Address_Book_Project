@@ -45,7 +45,14 @@ public class AddressBookMain
             String editLastName = sc.next();
             addressBook.editContact(editFirstName, editLastName);
         }
+        System.out.println("\nDo you want to delete a contact? (yes/no)");
+        choice = sc.next();
+        if (choice.equalsIgnoreCase("yes")) {
+            System.out.println("Enter the first name of the contact to delete:");
+            String deleteFirstName = sc.next();
+            System.out.println("Enter the last name of the contact to delete:");
+            String deleteLastName = sc.next();
+            addressBook.deleteContact(deleteFirstName, deleteLastName);
+        }
     }
-
-
 }

@@ -12,6 +12,7 @@ public class AddressBookMain
         AddressBook addressBook = new AddressBook();
 
         System.out.println("Enter the contact details:");
+
         System.out.println("Enter the first name:");
         String firstName = sc.next();
         System.out.println("Enter the last name:");

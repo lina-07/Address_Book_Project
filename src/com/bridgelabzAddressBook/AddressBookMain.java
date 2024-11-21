@@ -2,8 +2,7 @@ package com.bridgelabzAddressBook;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AddressBookMain
-{
+public class AddressBookMain {
     public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -35,11 +34,10 @@ public class AddressBookMain
         for (Details contact : contactList) {
             System.out.println(contact.getFirstName() + " " + contact.getLastName() + " " + contact.getAddress() + " " + contact.getCity() +
                     " " + contact.getState() + " " + contact.getEmail() + " " + contact.getPhoneNumber() + " " + contact.getZip());
-         }
+        }
         System.out.println("\nDo you want to edit a contact? (yes/no)");
         String choice = sc.next();
-        if (choice.equalsIgnoreCase("yes"))
-        {
+        if (choice.equalsIgnoreCase("yes")) {
             System.out.println("Enter the first name of the contact to edit:");
             String editFirstName = sc.next();
             System.out.println("Enter the last name of the contact to edit:");
